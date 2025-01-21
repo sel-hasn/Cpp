@@ -19,7 +19,7 @@ std::string PhoneBook::get_input(std::string missage)
         if (std::cin.eof())
             exit (1);
         else if (!non_print(input))
-            std::cout<<"ronge input, try again"<<std::endl;
+            std::cout<<"Wrong input, try again"<<std::endl;
     }
     return (input);
 }
@@ -56,7 +56,7 @@ void    PhoneBook::search(void)
     int i = atoi(indx.c_str());
     if (i == 0 || i > 8 || i > contact_nbr)
     {
-        std::cout<<"ronge index, try again"<<std::endl;
+        std::cout<<"Wronge index, try again"<<std::endl;
         return ;
     }
     std::cout<<"contact you looking for is :"<<std::endl;
@@ -106,7 +106,7 @@ int main()
             break ;
         }
         else
-            std::cout<<"ronge input, try again"<<std::endl;
+            std::cout<<"Wronge input, try again"<<std::endl;
     }
     return (0);
 }

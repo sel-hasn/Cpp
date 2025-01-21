@@ -9,7 +9,6 @@ int main()
     std::cout<<"string memory address : "<<&str<<std::endl;
     std::cout<<"stringPTR memory address : "<<stringPTR<<std::endl;
     std::cout<<"stringREF memory address : "<<&stringREF<<std::endl;
-    std::cout<<"string value : "<<str<<std::endl;
     std::cout<<"stringPTR value : "<<*stringPTR<<std::endl;
     std::cout<<"stringREF value : "<<stringREF<<std::endl;
 }

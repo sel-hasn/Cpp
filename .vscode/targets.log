@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jan 19 13:42:49 2025
+# Make data base, printed on Tue Jan 21 17:16:43 2025
 
 # Variables
 
@@ -19,7 +19,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = /home/sel-hasn/.ssh
+VSCODE_CWD = /home/sel-hasn/Desktop
 # environment
 LIBVIRT_DEFAULT_URI = qemu:///system
 # environment
@@ -43,7 +43,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/sel-hasn/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/sel-hasn/.ssh
+OLDPWD = /home/sel-hasn/Desktop
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -51,7 +51,7 @@ OLDPWD = /home/sel-hasn/.ssh
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sel-hasn/.config/Code/CachedData/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session27
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
 # environment
 LANG = C
 # environment
@@ -61,21 +61,19 @@ XAUTHORITY = /home/sel-hasn/.Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.380
+GNOME_TERMINAL_SERVICE = :1.113
 # makefile
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/sel-hasn/Desktop/Cpp
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
-# environment
-VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXRlZRHd/agent.969516
+SSH_AUTH_SOCK = /run/user/103306/keyring/ssh
 # default
 .SHELLFLAGS := -c
 # environment
@@ -91,15 +89,15 @@ MAKEFILE_LIST :=
 # environment
 ZSH = /home/sel-hasn/.oh-my-zsh
 # environment
-VSCODE_PID = 969663
+VSCODE_PID = 163841
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103306_ed7PRm
+KRB5CCNAME = FILE:/tmp/krb5cc_103306_HBD1YK
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/e1r10p15.1337.ma:@/tmp/.ICE-unix/935664,unix/e1r10p15.1337.ma:/tmp/.ICE-unix/935664
+SESSION_MANAGER = local/e1r7p15.1337.ma:@/tmp/.ICE-unix/158347,unix/e1r7p15.1337.ma:/tmp/.ICE-unix/158347
 # automatic
 *F = $(notdir $*)
 # environment
@@ -123,7 +121,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/b419c6ca_0efa_4bcf_a049_2dc83eb98848
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/45d88187_0f02_4eb1_8e6b_14c725089c15
 # environment
 MAKELEVEL := 0
 # default
@@ -163,7 +161,7 @@ LOGNAME = sel-hasn
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 935688
+SYSTEMD_EXEC_PID = 158366
 # environment
 DISPLAY = :0
 # environment
@@ -172,8 +170,6 @@ USER = sel-hasn
 GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
-# environment
-SSH_AGENT_PID = 969517
 # environment
 PAGER = less
 # environment
@@ -221,7 +217,7 @@ VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=105/1024=10%, Rehash=0, Collisions=13/132=10%
+# Load=103/1024=10%, Rehash=0, Collisions=11/130=8%
 
 # Pattern-specific Variable Values
 
@@ -229,9 +225,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 2064, inode 6632589): 8 files, no impossibilities.
+# . (device 2064, inode 6632589): 7 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -277,19 +273,19 @@ GNUmakefile:
 # Load=6/1024=1%, Rehash=0, Collisions=0/15=0%
 # VPATH Search Paths
 
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 135 B / avg = 8 B
-# current buf: size = 8162 B / used = 135 B / count = 16 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 126 B / avg = 8 B
+# current buf: size = 8162 B / used = 126 B / count = 15 / avg = 8 B
 
-# strcache performance: lookups = 19 / hit rate = 15%
+# strcache performance: lookups = 18 / hit rate = 16%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=0/19=0%
-# Finished Make data base on Sun Jan 19 13:42:49 2025
+ 
+make: *** No rule to make target 'all'.  Stop.
+
+# Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
+# Finished Make data base on Tue Jan 21 17:16:43 2025
 
  
