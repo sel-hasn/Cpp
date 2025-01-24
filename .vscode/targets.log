@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jan 21 17:16:43 2025
+# Make data base, printed on Fri Jan 24 12:02:00 2025
 
 # Variables
 
@@ -19,7 +21,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
-VSCODE_CWD = /home/sel-hasn/Desktop
+VSCODE_CWD = /home/sel-hasn
 # environment
 LIBVIRT_DEFAULT_URI = qemu:///system
 # environment
@@ -43,7 +45,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/home/sel-hasn/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/sel-hasn/Desktop
+OLDPWD = /home/sel-hasn
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -51,7 +53,7 @@ OLDPWD = /home/sel-hasn/Desktop
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sel-hasn/.config/Code/CachedData/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session4
 # environment
 LANG = C
 # environment
@@ -61,7 +63,7 @@ XAUTHORITY = /home/sel-hasn/.Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.113
+GNOME_TERMINAL_SERVICE = :1.116
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -89,15 +91,15 @@ MAKEFILE_LIST :=
 # environment
 ZSH = /home/sel-hasn/.oh-my-zsh
 # environment
-VSCODE_PID = 163841
+VSCODE_PID = 129377
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103306_HBD1YK
+KRB5CCNAME = FILE:/tmp/krb5cc_103306_J5FAh6
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/e1r7p15.1337.ma:@/tmp/.ICE-unix/158347,unix/e1r7p15.1337.ma:/tmp/.ICE-unix/158347
+SESSION_MANAGER = local/e1r8p15.1337.ma:@/tmp/.ICE-unix/127998,unix/e1r8p15.1337.ma:/tmp/.ICE-unix/127998
 # automatic
 *F = $(notdir $*)
 # environment
@@ -121,7 +123,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/45d88187_0f02_4eb1_8e6b_14c725089c15
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/173ddff7_decb_4aee_b51a_233e4b747fa7
 # environment
 MAKELEVEL := 0
 # default
@@ -161,7 +163,7 @@ LOGNAME = sel-hasn
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 158366
+SYSTEMD_EXEC_PID = 128016
 # environment
 DISPLAY = :0
 # environment
@@ -225,9 +227,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 2064, inode 6632589): 7 files, no impossibilities.
+# . (device 2064, inode 6632589): 6 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 6 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -277,15 +279,13 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 15 / storage = 126 B / avg = 8 B
-# current buf: size = 8162 B / used = 126 B / count = 15 / avg = 8 B
-
-# strcache performance: lookups = 18 / hit rate = 16%
-# hash-table stats:
  
-make: *** No rule to make target 'all'.  Stop.
+# strcache buffers: 1 (0) / strings = 14 / storage = 115 B / avg = 8 B
+# current buf: size = 8162 B / used = 115 B / count = 14 / avg = 8 B
 
-# Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Tue Jan 21 17:16:43 2025
+# strcache performance: lookups = 17 / hit rate = 17%
+# hash-table stats:
+# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
+# Finished Make data base on Fri Jan 24 12:02:00 2025
 
  

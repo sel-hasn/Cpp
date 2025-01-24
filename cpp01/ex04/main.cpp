@@ -17,10 +17,10 @@ void    replace(std::string &filename, std::string &s1, std::string &s2)
     }
     std::string line;
     std::getline(in_file, line);
-    if (in_file.eof()){
-        std::cerr<<"Error :in_file cannot be empty"<<std::endl;
-        return ;
-    }
+    // if (in_file.eof()){
+    //     std::cerr<<"Error :in_file cannot be empty"<<std::endl;
+    //     return ;
+    // }
     size_t pos;
     do
     {
@@ -32,7 +32,10 @@ void    replace(std::string &filename, std::string &s1, std::string &s2)
             line.insert(pos, s2);
             pos += s2.length();
         }
-        out_file<<line<<std::endl;
+        if (!in_file.eof())
+            out_file<<line<<std::endl;
+        else
+            out_file<<line;
     } while (std::getline(in_file, line));
     in_file.close();
     out_file.close();
