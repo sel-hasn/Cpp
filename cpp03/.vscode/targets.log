@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Feb 19 08:04:28 2025
+# Make data base, printed on Fri Feb 21 17:53:18 2025
 
 # Variables
 
@@ -35,7 +37,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/sel-hasn/Desktop/Cpp/cpp02
+PWD = /home/sel-hasn/Desktop/Cpp/cpp03
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -51,7 +53,7 @@ OLDPWD = /home/sel-hasn
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sel-hasn/.config/Code/CachedData/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session37
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session52
 # environment
 LANG = C
 # environment
@@ -61,11 +63,11 @@ XAUTHORITY = /home/sel-hasn/.Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.116
+GNOME_TERMINAL_SERVICE = :1.130
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/sel-hasn/Desktop/Cpp/cpp02
+CURDIR := /home/sel-hasn/Desktop/Cpp/cpp03
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
@@ -91,15 +93,15 @@ MAKEFILE_LIST :=
 # environment
 ZSH = /home/sel-hasn/.oh-my-zsh
 # environment
-VSCODE_PID = 2085889
+VSCODE_PID = 1415721
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103306_cssY8I
+KRB5CCNAME = FILE:/tmp/krb5cc_103306_h8CgMd
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/e1r10p14.1337.ma:@/tmp/.ICE-unix/2082831,unix/e1r10p14.1337.ma:/tmp/.ICE-unix/2082831
+SESSION_MANAGER = local/e1r8p15.1337.ma:@/tmp/.ICE-unix/1412945,unix/e1r8p15.1337.ma:/tmp/.ICE-unix/1412945
 # automatic
 *F = $(notdir $*)
 # environment
@@ -123,7 +125,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/fbda1eca_8087_4933_8b3b_57b25b054265
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/57f2b425_fd42_4cd4_a2f6_b448494704dc
 # environment
 MAKELEVEL := 0
 # default
@@ -158,12 +160,13 @@ DESKTOP_SESSION = ubuntu
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # 'override' directive
 GNUMAKEFLAGS := 
+ 
 # environment
 LOGNAME = sel-hasn
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 2082849
+SYSTEMD_EXEC_PID = 1412964
 # environment
 DISPLAY = :0
 # environment
@@ -227,7 +230,7 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 2064, inode 1349): 7 files, no impossibilities.
+# . (device 2064, inode 8783340): 7 files, no impossibilities.
 
 # 7 files, no impossibilities in 1 directories.
 
@@ -241,6 +244,7 @@ GDMSESSION = ubuntu
 Makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
+ 
 #  File has been updated.
 #  Failed to be updated.
 
@@ -267,6 +271,7 @@ makefile:
 # Not a target:
 GNUmakefile:
 #  Implicit rule search has been done.
+ 
 #  File does not exist.
 #  File has been updated.
 #  Failed to be updated.
@@ -283,11 +288,8 @@ GNUmakefile:
 # current buf: size = 8162 B / used = 118 B / count = 15 / avg = 7 B
 
 # strcache performance: lookups = 18 / hit rate = 16%
- 
-make: *** No rule to make target 'all'.  Stop.
-
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
-# Finished Make data base on Wed Feb 19 08:04:28 2025
+# Finished Make data base on Fri Feb 21 17:53:18 2025
 
  
