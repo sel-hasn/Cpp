@@ -21,6 +21,9 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
 
 bool Non_PrinTable(const std::string &input)
 {
+    if (input.empty())
+        throw std::runtime_error("empty string");
+    std::cout<<input;
     for (size_t i=0; i < input.length(); i++)
     {
         if (input[i] < 32 || input[i] > 126)
@@ -38,18 +41,13 @@ bool Is_Char(const std::string &input)
 
 bool Is_Integer(const std::string &input)
 {
-    if (input.length() > 1 && (input[0] == '-' || input[0] == '+'))
-    {
-        for (size_t i=1; i < input.length(); i++)
-        {
-            if (!isdigit(input[i]))
-            return false;
-        }
-    }
-    for (size_t i=0; i < input.length(); i++)
+    size_t start = 0;
+    if (input[0] == '-' || input[0] == '+')
+        start = 1;
+    for (size_t i = start; i < input.length(); i++)
     {
         if (!isdigit(input[i]))
-        return false;
+            return false;
     }
     return true;
 }
@@ -58,27 +56,20 @@ bool Is_Double(const std::string &input)
 {
     int dot = 0;
 
-    if (input.length() > 1 && (input[0] == '-' || input[0] == '+'))
-    {
-        for (size_t i=1; i < input.length(); i++)
-        {
-            if (input[i] == '.')
-            dot++;
-            if (!isdigit(input[i]) && input[i] != '.')
-            return false;
-        }
-        if (dot == 1)
-            return true;
-    }
-    for (size_t i=0; i < input.length(); i++)
+    size_t start = 0;
+    if (input[0] == '-' || input[0] == '+')
+        start = 1;
+    for (size_t i = start; i < input.length(); i++)
     {
         if (input[i] == '.')
             dot++;
-        if (!isdigit(input[i]) && input[i] != '.')
+        else if (!isdigit(input[i]))
             return false;
     }
-    if (dot == 1)
+
+    if (dot == 1 && input[0] != '.' && input[input.length() - 1] != '.')
         return true;
+
     return false;
 }
 
@@ -98,18 +89,16 @@ int ConvertToInt(const std::string &input)
     
     ss >> num;
     if (ss.fail() || !ss.eof())
-    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible\n");
+    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
     return num;
 }
 
 float ConvertToFloat(const std::string &input)
 {
-    std::stringstream ss(input);
-    float num;
-    
-    ss >> num;
-    if (ss.fail() || !ss.eof())
-    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible\n");
+    float num = std::atof(input.c_str());
+    if (num == 0.0f && input != "0")
+        throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
+
     return num;
 }
 
@@ -120,7 +109,7 @@ double ConvertToDouble(const std::string &input)
     
     ss >> num;
     if (ss.fail() || !ss.eof())
-    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible\n");
+    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
     return num;
 }
 
@@ -153,7 +142,7 @@ void ScalarConverter::convert(std::string input)
                 if (i > std::numeric_limits<char>::max() || i < std::numeric_limits<char>::min())
                     std::cout<<"impossible"<<std::endl;
                 else if (i < 0 || ((i >= 0 && i < 32) || i == 127))
-                    std::cout<<"Non Printable"<<std::endl;
+                    std::cout<<"Non displayable"<<std::endl;
                 else
                     std::cout<<"'"<<static_cast<char>(i)<<"'"<<std::endl;
                 std::cout<<"int: "<<i<<std::endl;
@@ -167,7 +156,7 @@ void ScalarConverter::convert(std::string input)
                 if (f > std::numeric_limits<char>::max() || f < std::numeric_limits<char>::min())
                     std::cout<<"impossible"<<std::endl;
                 else if (f < 0 || ((f >= 0 && f < 32) || f == 127))
-                    std::cout<<"Non Printable"<<std::endl;
+                    std::cout<<"Non displayable"<<std::endl;
                 else
                     std::cout<<"'"<<static_cast<char>(f)<<"'"<<std::endl;
                 std::cout<<"int: ";
@@ -175,8 +164,8 @@ void ScalarConverter::convert(std::string input)
                     std::cout<<"impossible"<<std::endl;
                 else 
                     std::cout<<static_cast<int>(f)<<std::endl;
-                std::cout<<"float: "<<f<<std::endl;
-                std::cout<<"double: "<<static_cast<double>(f)<<std::endl;
+                std::cout<<"float: "<<std::fixed<<f<<"f"<<std::endl;
+                std::cout<<"double: "<<std::fixed<<static_cast<double>(f)<<std::endl;
             }
             else if (Is_Double(input))
             {
@@ -193,8 +182,8 @@ void ScalarConverter::convert(std::string input)
                     std::cout<<"impossible"<<std::endl;
                 else 
                     std::cout<<static_cast<int>(d)<<std::endl;
-                std::cout<<"float: "<<static_cast<float>(d)<<std::endl;
-                std::cout<<"double: "<<d<<std::endl;
+                std::cout<<"float: "<<std::fixed<<static_cast<float>(d)<<"f"<<std::endl;
+                std::cout<<"double: "<<std::fixed<<d<<std::endl;
             }
             else if (Is_Special(input))
             {
@@ -221,7 +210,7 @@ void ScalarConverter::convert(std::string input)
                 }
             }
             else 
-                throw std::runtime_error("Invalid Input");
+            throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
     }
     catch (std::exception &exp)
     {
