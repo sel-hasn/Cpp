@@ -21,13 +21,13 @@ ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other)
 
 bool Non_PrinTable(const std::string &input)
 {
-    if (input.empty())
+    if (input.empty()){
         throw std::runtime_error("empty string");
-    std::cout<<input;
-    for (size_t i=0; i < input.length(); i++)
-    {
-        if (input[i] < 32 || input[i] > 126)
+    }
+    for (size_t i = 0; i < input.length(); i++) {
+        if (!std::isprint(static_cast<unsigned char>(input[i]))) {
             return true;
+        }
     }
     return false;
 }
@@ -49,6 +49,13 @@ bool Is_Integer(const std::string &input)
         if (!isdigit(input[i]))
             return false;
     }
+    std::stringstream ss(input);
+    double num;
+
+    ss >> num;
+    if (num < std::numeric_limits<int>::min() || num > std::numeric_limits<int>::max()){
+        throw std::runtime_error("Int Overflow Detected!");
+    }
     return true;
 }
 
@@ -67,7 +74,7 @@ bool Is_Double(const std::string &input)
             return false;
     }
 
-    if (dot == 1 && input[0] != '.' && input[input.length() - 1] != '.')
+    if (dot == 1)
         return true;
 
     return false;
@@ -89,16 +96,22 @@ int ConvertToInt(const std::string &input)
     
     ss >> num;
     if (ss.fail() || !ss.eof())
-    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
+        throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
     return num;
 }
 
 float ConvertToFloat(const std::string &input)
 {
-    float num = std::atof(input.c_str());
-    if (num == 0.0f && input != "0")
+    std::stringstream ss(input);
+    double num;
+
+    ss >> num;
+    if (ss.fail() || !ss.eof())
         throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
 
+    if (num > std::numeric_limits<float>::max() || num < -std::numeric_limits<float>::max()) {
+        throw std::runtime_error("Float Overflow Detected!");
+    }
     return num;
 }
 
@@ -109,7 +122,10 @@ double ConvertToDouble(const std::string &input)
     
     ss >> num;
     if (ss.fail() || !ss.eof())
-    throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
+        throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
+    if (num > std::numeric_limits<double>::max() || num < -std::numeric_limits<double>::max()) {
+        throw std::runtime_error("Double Overflow Detected!");
+    }
     return num;
 }
 
@@ -146,12 +162,12 @@ void ScalarConverter::convert(std::string input)
                 else
                     std::cout<<"'"<<static_cast<char>(i)<<"'"<<std::endl;
                 std::cout<<"int: "<<i<<std::endl;
-                std::cout<<"float: "<<static_cast<float>(i)<<".0f"<<std::endl;
-                std::cout<<"double: "<<static_cast<double>(i)<<".0"<<std::endl;
+                std::cout<<"float: "<<std::fixed<<static_cast<float>(i)<<".0f"<<std::endl;
+                std::cout<<"double: "<<std::fixed<<static_cast<double>(i)<<".0"<<std::endl;
             }
             else if (Is_Float(input))
             {
-                float f = ConvertToFloat(input);
+                float f = ConvertToFloat(input.substr(0, input.length() - 1));
                 std::cout<<"char: ";
                 if (f > std::numeric_limits<char>::max() || f < std::numeric_limits<char>::min())
                     std::cout<<"impossible"<<std::endl;
@@ -160,10 +176,10 @@ void ScalarConverter::convert(std::string input)
                 else
                     std::cout<<"'"<<static_cast<char>(f)<<"'"<<std::endl;
                 std::cout<<"int: ";
-                if (f > std::numeric_limits<int>::max() || f < std::numeric_limits<int>::min())
-                    std::cout<<"impossible"<<std::endl;
+                if (static_cast<double>(f) > std::numeric_limits<int>::max() || static_cast<double>(f) < std::numeric_limits<int>::min())
+                    std::cout << "impossible" << std::endl;
                 else 
-                    std::cout<<static_cast<int>(f)<<std::endl;
+                    std::cout<<std::fixed<<static_cast<int>(f)<<std::endl;
                 std::cout<<"float: "<<std::fixed<<f<<"f"<<std::endl;
                 std::cout<<"double: "<<std::fixed<<static_cast<double>(f)<<std::endl;
             }
@@ -210,7 +226,7 @@ void ScalarConverter::convert(std::string input)
                 }
             }
             else 
-            throw std::runtime_error("char: impossible\nint: impossible\nfloat: impossible\ndouble: impossible");
+                throw std::runtime_error("Invalid Input");
     }
     catch (std::exception &exp)
     {
