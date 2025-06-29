@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jan 24 12:02:00 2025
+# Make data base, printed on Wed Feb 19 08:04:28 2025
 
 # Variables
 
@@ -37,7 +35,7 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
 # environment
-PWD = /home/sel-hasn/Desktop/Cpp
+PWD = /home/sel-hasn/Desktop/Cpp/cpp02
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
@@ -53,7 +51,7 @@ OLDPWD = /home/sel-hasn
 # environment
 VSCODE_CODE_CACHE_PATH = /home/sel-hasn/.config/Code/CachedData/cd4ee3b1c348a13bafd8f9ad8060705f6d4b9cba
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session4
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session37
 # environment
 LANG = C
 # environment
@@ -67,9 +65,11 @@ GNOME_TERMINAL_SERVICE = :1.116
 # makefile
 MAKEFLAGS = pqrR
 # makefile
-CURDIR := /home/sel-hasn/Desktop/Cpp
+CURDIR := /home/sel-hasn/Desktop/Cpp/cpp02
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -91,15 +91,15 @@ MAKEFILE_LIST :=
 # environment
 ZSH = /home/sel-hasn/.oh-my-zsh
 # environment
-VSCODE_PID = 129377
+VSCODE_PID = 2085889
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_103306_J5FAh6
+KRB5CCNAME = FILE:/tmp/krb5cc_103306_cssY8I
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/e1r8p15.1337.ma:@/tmp/.ICE-unix/127998,unix/e1r8p15.1337.ma:/tmp/.ICE-unix/127998
+SESSION_MANAGER = local/e1r10p14.1337.ma:@/tmp/.ICE-unix/2082831,unix/e1r10p14.1337.ma:/tmp/.ICE-unix/2082831
 # automatic
 *F = $(notdir $*)
 # environment
@@ -123,7 +123,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/173ddff7_decb_4aee_b51a_233e4b747fa7
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/fbda1eca_8087_4933_8b3b_57b25b054265
 # environment
 MAKELEVEL := 0
 # default
@@ -163,7 +163,7 @@ LOGNAME = sel-hasn
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 128016
+SYSTEMD_EXEC_PID = 2082849
 # environment
 DISPLAY = :0
 # environment
@@ -219,7 +219,7 @@ VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=103/1024=10%, Rehash=0, Collisions=11/130=8%
+# Load=104/1024=10%, Rehash=0, Collisions=12/131=9%
 
 # Pattern-specific Variable Values
 
@@ -227,9 +227,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 2064, inode 6632589): 6 files, no impossibilities.
+# . (device 2064, inode 1349): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,13 +279,15 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
- 
-# strcache buffers: 1 (0) / strings = 14 / storage = 115 B / avg = 8 B
-# current buf: size = 8162 B / used = 115 B / count = 14 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 15 / storage = 118 B / avg = 7 B
+# current buf: size = 8162 B / used = 118 B / count = 15 / avg = 7 B
 
-# strcache performance: lookups = 17 / hit rate = 17%
+# strcache performance: lookups = 18 / hit rate = 16%
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 # hash-table stats:
-# Load=14/8192=0%, Rehash=0, Collisions=0/17=0%
-# Finished Make data base on Fri Jan 24 12:02:00 2025
+# Load=15/8192=0%, Rehash=0, Collisions=0/18=0%
+# Finished Make data base on Wed Feb 19 08:04:28 2025
 
  

@@ -1,6 +1,0 @@
-make --dry-run --keep-going --print-directory
-make: Entering directory '/home/sel-hasn/Desktop/Cpp/cpp03'
-make: Leaving directory '/home/sel-hasn/Desktop/Cpp/cpp03'
- 
-make: *** No targets specified and no makefile found.  Stop.
-

@@ -22,7 +22,7 @@ int main() {
         }
 
         std::cout << "Big span shortest: " << bigSpan.shortestSpan() << std::endl;
-        std::cout << "Big span longest: " << bigSpan.longestSpan() << std::endl;
+        std::cout << "Big spanthe first occurrenc longest: " << bigSpan.longestSpan() << std::endl;
 
     } catch (std::exception& e) {
         std::cout << "Exception caught: " << e.what() << std::endl;
